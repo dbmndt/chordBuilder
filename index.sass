@@ -1,0 +1,40 @@
+form 
+	display: grid
+	grid-template-columns: repeat(2, 110px)
+	grid-gap: 25px 20px
+	grid-template-rows: repeat(5, 25px)
+	.selectBar
+		grid-column: span 2
+	input, .selectBar
+		height: 25px
+		background: #fff //#E2E4E9
+		box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+		border-radius: 5px
+		border: none
+
+.selectBar
+	display: grid
+	grid-template-columns: repeat(var(--selectBarColumns, 7), 1fr)
+	grid-template-rows: 25px
+	grid-gap: 5px
+	width: 240px
+	padding: 0
+
+.chords
+	--selectBarColumns: 7
+	div
+		display: inline-block
+		max-width: 30px
+		input
+			position: absolute
+			opacity: 0
+		label
+			display: inline-block
+			margin: 2px
+			width: 26px
+			height: 21px
+			text-align: center
+			border-radius: 4px
+			text-transform: uppercase
+		input:checked + label
+			background: #5D7198

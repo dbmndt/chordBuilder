@@ -1,0 +1,63 @@
+form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (110px)[2];
+      grid-template-columns: repeat(2, 110px);
+  grid-gap: 25px 20px;
+  -ms-grid-rows: (25px)[5];
+      grid-template-rows: repeat(5, 25px);
+}
+
+form .selectBar {
+  grid-column: span 2;
+}
+
+form input, form .selectBar {
+  height: 25px;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: none;
+}
+
+.selectBar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[var];
+      grid-template-columns: repeat(var(--selectBarColumns, 7), 1fr);
+  -ms-grid-rows: 25px;
+      grid-template-rows: 25px;
+  grid-gap: 5px;
+  width: 240px;
+  padding: 0;
+}
+
+.chords {
+  --selectBarColumns: 7;
+}
+
+.chords div {
+  display: inline-block;
+  max-width: 30px;
+}
+
+.chords div input {
+  position: absolute;
+  opacity: 0;
+}
+
+.chords div label {
+  display: inline-block;
+  margin: 2px;
+  width: 26px;
+  height: 21px;
+  text-align: center;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.chords div input:checked + label {
+  background: #5D7198;
+}
+/*# sourceMappingURL=index.css.map */
